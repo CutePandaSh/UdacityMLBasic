@@ -8,6 +8,7 @@ def classify(features_train, labels_train):
     ### your code goes here!
 
     from sklearn.naive_bayes import GaussianNB
-    clf = GaussianNB()
+    from sklearn.svm import SVC
+    clf = SVC(kernel='rbf', gamma=5.0, C= 5.0)
     clf.fit(features_train, labels_train)
     return clf
